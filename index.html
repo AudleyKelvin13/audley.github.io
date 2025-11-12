@@ -1,126 +1,341 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/ccb50ba541.js" crossorigin="anonymous"></script>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Audley Kelvin Alexander — Portfolio</title>
+  <meta name="description" content="Portfolio of Audley Kelvin Alexander — Business & Data Analysis projects, dashboards, and e-commerce work."/>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://kit.fontawesome.com/ccb50ba541.js" crossorigin="anonymous"></script>
 </head>
-<body>
-    <div id="header">
-        <div class="container">
-            <nav>
-                <img src="logo1.png" class="logo">
-                <ul id="sidemenu">
-                    <li><a href="#header">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#contact">Contact</a></li>
-                    <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-                </ul>
-                <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-            </nav>
-            <div class="header-text">
-                <p>Web Developer</p>
-                <h1>Hi, I'm <span>Audley</span><br>Kelvin Alexander</h1>
-            </div>
-        </div>
-    </div>
+<body class="theme-dark">
+  <!-- NAV -->
+  <header id="site-header" class="site-header">
+    <div class="container nav-row">
+      <a class="brand" href="#hero">
+        <img src="logo1.png" alt="Logo" class="logo-img">
+        <span class="brand-text">Audley K. Alexander</span>
+      </a>
 
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="about-col-1">
-                    <img src="about.jpg">
-                </div>
-                <div class="about-col-2">
-                    <h1 class="sub-title">About Me</h1>
-                    <p> Hello, my name is Audley Kelvin Alexander, my friends usually call me Audley, I am 17 years old. I am a student with a hobby of listening to music and reading books. </p>
-                    
-                    <div class="tab-titles">
-                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
-                        <p class="tab-links" onclick="opentab('education')">Education</p>
-                    </div>
-                    <div class="tab-contents active-tab" id="skills">
-                        <ul>
-                            <li><span>Photoshop</span><br>Designer</li>
-                            <li><span>Premiere Pro</span><br>Editing Video</li>
-                            <li><span>After Effect</span><br>Editing</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="experience">
-                        <ul>
-                            <li><span>January 2020 - March 2020</span><br>On-job Training as Designer at Pamulang Creative Printing</li>
-                        </ul>
-                    </div>
-                    <div class="tab-contents" id="education">
-                        <ul>
-                            <li><span>2011-2017</span><br>Elementary School - Seruni Putih</li>
-                            <li><span>2017-2020</span><br>Junior High School - Seruni Putih</li>
-                            <li><span>2020-2023</span><br>Vocational High School - Letris Indonesia 2</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <nav class="nav">
+        <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+        <ul id="nav-list" class="nav-list">
+          <li><a href="#hero">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="CV.pdf" download class="btn-ghost">Download CV</a></li>
+          <li class="theme-switcher"><button id="theme-btn" aria-label="Toggle theme"><i class="fa-solid fa-moon"></i></button></li>
+          <li class="close-menu"><button id="menu-close" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button></li>
+        </ul>
+      </nav>
     </div>
-      <div id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="contact-left">
-                    <h1 class="sub-title">Contact Me</h1>
-                    <p><i class="fa-solid fa-paper-plane"></i> brizzlealoha@gmail.com</p>
-                    <p><i class="fa-sharp fa-solid fa-phone"></i> 0838-9106-7280</p>
-                    <div class="social-icons">
-                        <a href=""><i class="fa-brands fa-instagram"></i></a>
-                        <a href=""><i class="fa-brands fa-twitter"></i></a>
-                    </div>
-                    <a href="CV.pdf" download class="btn">Download CV</a>
-                </div>
-                <div class="contact-right">
-                    <form>
-                        <input type="text" name="Name" placeholder="Your Name" required>
-                        <input type="text" name="email" placeholder="Your Email" required>
-                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
-                        <button type="submit" class="btn">Submit</button>
-                    </form>
-                </div>
-            </div>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <h1>Hi, I'm <span class="accent">Audley</span><br>Kelvin Alexander</h1>
+        <p class="lead">Student | Business & Data Analyst — Data-driven solutions for MSMEs, dashboards, and ERP simulations.</p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn">View Projects</a>
+          <a href="CV.pdf" download class="btn-outline">Download CV</a>
         </div>
-        <div class="copyright">
-            <p> Copyright © Audley Kelvin Alexander </p>
+
+        <ul class="contact-quick">
+          <li><i class="fa-solid fa-location-dot"></i> Tangerang Selatan, Banten</li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:audleykelvinalexander@gmail.com">audleykelvinalexander@gmail.com</a></li>
+          <li><i class="fa-solid fa-phone"></i> <a href="tel:+6283891067280">0838-9106-7280</a></li>
+        </ul>
+
+        <div class="socials">
+          <a href="https://www.linkedin.com/in/audley-kelvin-alexander-651046357/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
-    <script>
 
-        var tablinks = document.getElementsByClassName("tab-links");
-        var tabcontents = document.getElementsByClassName("tab-contents");
+      <div class="hero-right">
+        <img src="about.jpg" alt="Audley portrait" class="hero-photo">
+        <div class="hero-badges">
+          <span>GPA: 3.73 / 4.00</span>
+          <span>Multimedia Nusantara Polytechnic</span>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function opentab(tabname){
-            for(tablink of tablinks){
-                tablink.classList.remove("active-link");
-            }
-            for(tabcontent of tabcontents){
-                tabcontent.classList.remove("active-tab");
-            }
-            event.currentTarget.classList.add("active-link");
-            document.getElementById(tabname).classList.add("active-tab");
-        }
+  <!-- ABOUT -->
+  <section id="about" class="about">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <p class="muted">Active student at Multimedia Nusantara Polytechnic majoring in Digital Commerce & Supply Chain. Passionate about using data and business processes to inform decisions and improve operations for MSMEs.</p>
 
-    </script>
+      <div class="row skills-row">
+        <div class="card">
+          <h3>Core Skills</h3>
+          <ul>
+            <li>Business Process Analysis</li>
+            <li>Reporting & KPI Tracking (Excel, Power BI)</li>
+            <li>ERP Simulation (Odoo)</li>
+            <li>Data Visualization & Interpretation</li>
+          </ul>
+        </div>
 
-    <script>
+        <div class="card">
+          <h3>Tools</h3>
+          <ul>
+            <li>Excel, Power BI, Tableau</li>
+            <li>Odoo ERP, Google Sheets</li>
+            <li>SQL, Python (basic), R</li>
+            <li>Word, PowerPoint</li>
+          </ul>
+        </div>
 
-        var sidemenu = document.getElementById("sidemenu");
+        <div class="card">
+          <h3>Soft Skills</h3>
+          <ul>
+            <li>Communication (English & Bahasa)</li>
+            <li>Problem Solving & Attention to Detail</li>
+            <li>Teamwork & Independent Worker</li>
+            <li>Eager to learn new tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        function openmenu(){
-            sidemenu.style.right = "0";
-        }
-        function closemenu(){
-            sidemenu.style.right = "-200px";
-        }
-    </script>
+  <!-- PROJECTS -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <h2 class="section-title">Selected Projects</h2>
+      <p class="muted">Mix of Business Analysis and Data-focused projects — click a card to view details.</p>
+
+      <div class="filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="data">Data Analyst</button>
+        <button class="filter-btn" data-filter="business">Business Analyst</button>
+      </div>
+
+      <div id="projects-grid" class="projects-grid">
+        <!-- Project Card 1: ERP Simulation (Business) -->
+        <article class="project-card" data-type="business" tabindex="0">
+          <img src="proj-odoo.png" alt="ERP Simulation screenshot">
+          <div class="card-body">
+            <h3>ERP Integration Simulation (Odoo)</h3>
+            <p class="small">Simulated procurement-to-payment workflow to find process improvements.</p>
+            <div class="card-meta">
+              <span>2024</span>
+              <button class="view-btn" data-id="p1">View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 2: Shopee E-commerce (Business + Data) -->
+        <article class="project-card" data-type="business" tabindex="0">
+          <img src="proj-shopee.png" alt="Shopee store image">
+          <div class="card-body">
+            <h3>Shopee Store & Marketing for Alina Fashion Craft</h3>
+            <p class="small">Set up store, ran marketing, and analyzed sales (2% uplift during mentorship).</p>
+            <div class="card-meta">
+              <span>2024</span>
+              <button class="view-btn" data-id="p2">View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 3: Dashboard (Data) -->
+        <article class="project-card" data-type="data" tabindex="0">
+          <img src="proj-dashboard.png" alt="Tableau dashboard">
+          <div class="card-body">
+            <h3>Sales Performance Dashboard</h3>
+            <p class="small">Interactive Tableau dashboard with dynamic metrics (Sales / Profit) and product filters.</p>
+            <div class="card-meta">
+              <span>2024</span>
+              <button class="view-btn" data-id="p3">View</button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project Card 4: Packaging Innovation (Business) -->
+        <article class="project-card" data-type="business" tabindex="0">
+          <img src="proj-packaging.png" alt="Packaging design">
+          <div class="card-body">
+            <h3>Product Innovation & Packaging for MSMEs</h3>
+            <p class="small">Design recommendations informed by customer feedback and sales insights.</p>
+            <div class="card-meta">
+              <span>2024</span>
+              <button class="view-btn" data-id="p4">View</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Project Modal -->
+  <div id="project-modal" class="modal" aria-hidden="true" role="dialog" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button id="modal-close" class="modal-close" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+      <div id="modal-body">
+        <!-- Filled dynamically -->
+      </div>
+    </div>
+  </div>
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <h2 class="section-title">Contact</h2>
+      <div class="row contact-row">
+        <div class="card contact-card">
+          <h3>Get in touch</h3>
+          <p class="muted">Available for internships and entry-level Business / Data Analyst roles.</p>
+          <ul class="contact-list">
+            <li><i class="fa-solid fa-envelope"></i> <a href="mailto:audleykelvinalexander@gmail.com">audleykelvinalexander@gmail.com</a></li>
+            <li><i class="fa-solid fa-phone"></i> <a href="tel:+6283891067280">0838-9106-7280</a></li>
+            <li><i class="fa-solid fa-location-dot"></i> Tangerang Selatan, Banten</li>
+          </ul>
+          <div class="socials">
+            <a href="https://www.linkedin.com/in/audley-kelvin-alexander-651046357/" target="_blank" rel="noopener"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="#" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i></a>
+          </div>
+        </div>
+
+        <form id="contact-form" class="card contact-form" action="#" onsubmit="submitContact(event)">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name">
+
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="Your email">
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" rows="6" required placeholder="Your message"></textarea>
+
+          <button type="submit" class="btn">Send message</button>
+          <p id="form-note" class="muted small">This form opens your email client. Alternatively, email me directly.</p>
+        </form>
+      </div>
+    </div>
+
+    <footer class="site-footer">
+      <div class="container">
+        <p>© Audley Kelvin Alexander — <span id="year"></span></p>
+      </div>
+    </footer>
+  </section>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Basic UI: mobile menu, theme, year
+    const navList = document.getElementById('nav-list');
+    document.getElementById('menu-toggle').addEventListener('click', ()=> navList.classList.add('open'));
+    document.getElementById('menu-close').addEventListener('click', ()=> navList.classList.remove('open'));
+
+    // Theme toggle
+    const themeBtn = document.getElementById('theme-btn');
+    themeBtn.addEventListener('click', ()=>{
+      document.body.classList.toggle('theme-dark');
+      document.body.classList.toggle('theme-light');
+      themeBtn.querySelector('i').classList.toggle('fa-sun');
+      themeBtn.querySelector('i').classList.toggle('fa-moon');
+    });
+
+    // Year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // PROJECT FILTERS
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+    filterBtns.forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        filterBtns.forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card=>{
+          const type = card.dataset.type;
+          if(filter === 'all' || filter === type) {
+            card.style.display = '';
+            card.classList.add('fade-in');
+          } else {
+            card.style.display = 'none';
+            card.classList.remove('fade-in');
+          }
+        });
+      });
+    });
+
+    // PROJECT MODAL DATA (fill with your real text/images later)
+    const projectsData = {
+      p1: {
+        title: 'ERP Integration Simulation (Odoo)',
+        date: '2024',
+        content: `<p><strong>Role:</strong> Process & Business Analyst (Simulation)</p>
+        <p>Simulated end-to-end procurement-to-payment and restocking workflows using Odoo. Analyzed process bottlenecks and proposed inventory/financial visibility improvements. Produced workflow diagrams and recommendations for MSME adoption.</p>
+        <p><strong>Skills & Tools:</strong> Odoo, Excel, Process Mapping, KPI Analysis</p>`
+      },
+      p2: {
+        title: 'Shopee Store & Marketing for Alina Fashion Craft',
+        date: '2024',
+        content: `<p><strong>Role:</strong> Business & Marketing Analyst</p>
+        <p>Set up Shopee store and ran basic marketing campaigns. Tracked sales and engagement; prepared weekly summary reports and recommended product listing optimizations. Resulted in a 2% revenue uplift during mentorship period.</p>
+        <p><strong>Skills & Tools:</strong> Shopee, Google Sheets, Basic Analytics, E-commerce Strategy</p>`
+      },
+      p3: {
+        title: 'Sales Performance Dashboard',
+        date: '2024',
+        content: `<p><strong>Role:</strong> Data & Visualization Analyst</p>
+        <p>Built interactive Tableau dashboard with dynamic metric selection (Sales / Profit) and product-level filters to support regional decision-making. Delivered insights to prioritize high-margin product promotions.</p>
+        <p><strong>Skills & Tools:</strong> Tableau, Data Visualization, KPI Tracking</p>`
+      },
+      p4: {
+        title: 'Product Innovation & Packaging for MSMEs',
+        date: '2024',
+        content: `<p><strong>Role:</strong> Business & Design Analyst</p>
+        <p>Worked with owners to redesign packaging and aligned recommendations with customer feedback and sales trends. Provided a short action plan to improve shelf appeal and marketing messaging.</p><p><strong>Skills & Tools:</strong> Market Research, Packaging Design Evaluation, Presentation</p>`
+      }
+    };
+
+    // Open modal
+    const modal = document.getElementById('project-modal');
+    const modalBody = document.getElementById('modal-body');
+    document.querySelectorAll('.view-btn, .project-card').forEach(btn=>{
+      btn.addEventListener('click', (e)=>{
+        const id = e.currentTarget.dataset.id || e.currentTarget.querySelector('.view-btn')?.dataset.id;
+        if(!id) return;
+        const data = projectsData[id];
+        modalBody.innerHTML = `<h2 id="modal-title">${data.title}</h2><p class="muted small">${data.date}</p>${data.content}`;
+        modal.classList.add('open');
+        modal.setAttribute('aria-hidden','false');
+        document.body.style.overflow = 'hidden';
+      });
+    });
+
+    // close modal
+    document.getElementById('modal-close').addEventListener('click', closeModal);
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+    function closeModal(){
+      modal.classList.remove('open');
+      modal.setAttribute('aria-hidden','true');
+      document.body.style.overflow = '';
+    }
+
+    // Contact form (opens mail client)
+    function submitContact(e){
+      e.preventDefault();
+      const name = encodeURIComponent(document.getElementById('name').value.trim());
+      const mail = encodeURIComponent(document.getElementById('email').value.trim());
+      const message = encodeURIComponent(document.getElementById('message').value.trim());
+      const subject = encodeURIComponent('Portfolio contact from ' + name);
+      const body = encodeURIComponent(`Name: ${name}\nEmail: ${mail}\n\nMessage:\n${message}`);
+      window.location.href = `mailto:audleykelvinalexander@gmail.com?subject=${subject}&body=${body}`;
+    }
+
+    // keyboard: close modal with Esc
+    document.addEventListener('keydown', (e)=>{ if(e.key === 'Escape') closeModal(); });
+
+  </script>
 </body>
 </html>
