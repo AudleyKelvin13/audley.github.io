@@ -8,7 +8,7 @@
   <link rel="stylesheet" href="style.css">
   <script src="https://kit.fontawesome.com/ccb50ba541.js" crossorigin="anonymous"></script>
 </head>
-<body class="theme-dark">
+<body>
   <!-- NAV -->
   <header id="site-header" class="site-header">
     <div class="container nav-row">
@@ -19,6 +19,9 @@
       <nav class="nav">
         <button id="menu-toggle" class="menu-toggle" aria-label="Open menu">
           <i class="fa-solid fa-bars"></i>
+        </button>
+        <button id="menu-close" class="menu-toggle" aria-label="Close menu">
+          <i class="fa-solid fa-xmark"></i>
         </button>
         <ul id="nav-list" class="nav-list">
           <li><a href="#hero">Home</a></li>
@@ -50,7 +53,7 @@
 
         <ul class="contact-quick">
           <li><i class="fa-solid fa-location-dot"></i> Tangerang Selatan, Banten</li>
-          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:audleykelvinalexander@gmail.com">audleykelvin13@gmail.com</a></li>
+          <li><i class="fa-solid fa-envelope"></i> <a href="mailto:audleykelvin13@gmail.com">audleykelvin13@gmail.com</a></li>
           <li><i class="fa-solid fa-phone"></i> <a href="tel:+6283891067280">0838-9106-7280</a></li>
         </ul>
 
@@ -247,7 +250,6 @@
       body.classList.add(savedTheme);
       themeToggle.checked = savedTheme === 'theme-light';
     } else {
-      // default to dark mode
       body.classList.add('theme-dark');
     }
     
@@ -262,32 +264,6 @@
         body.classList.add('theme-dark');
         localStorage.setItem('theme', 'theme-dark');
       }
-    });
-    // Theme toggle (slider)
-    const themeToggle = document.getElementById('theme-toggle');
-    themeToggle.addEventListener('change', ()=>{
-      if (themeToggle.checked) {
-        document.body.classList.remove('theme-dark');
-        document.body.classList.add('theme-light');
-      } else {
-        document.body.classList.remove('theme-light');
-        document.body.classList.add('theme-dark');
-      }
-    });
-
-    // Save theme preference
-    const savedTheme = localStorage.getItem('theme');
-    if(savedTheme){
-      document.body.classList.remove('theme-dark','theme-light');
-      document.body.classList.add(savedTheme);
-      themeToggle.checked = savedTheme === 'theme-light';
-    }
-    
-    themeToggle.addEventListener('change', ()=>{
-      const theme = themeToggle.checked ? 'theme-light' : 'theme-dark';
-      document.body.classList.remove('theme-dark','theme-light');
-      document.body.classList.add(theme);
-      localStorage.setItem('theme', theme);
     });
 
     // Year
@@ -386,6 +362,7 @@
   </script>
 </body>
 </html>
+
 
 
 
