@@ -240,14 +240,18 @@
     document.getElementById('menu-toggle').addEventListener('click', ()=> navList.classList.add('open'));
     document.getElementById('menu-close').addEventListener('click', ()=> navList.classList.remove('open'));
 
-    // Theme toggle
-    const themeBtn = document.getElementById('theme-btn');
-    themeBtn.addEventListener('click', ()=>{
-      document.body.classList.toggle('theme-dark');
-      document.body.classList.toggle('theme-light');
-      themeBtn.querySelector('i').classList.toggle('fa-sun');
-      themeBtn.querySelector('i').classList.toggle('fa-moon');
+    // Theme toggle (slider)
+    const themeToggle = document.getElementById('theme-toggle');
+    themeToggle.addEventListener('change', ()=>{
+      if (themeToggle.checked) {
+        document.body.classList.remove('theme-dark');
+        document.body.classList.add('theme-light');
+      } else {
+        document.body.classList.remove('theme-light');
+        document.body.classList.add('theme-dark');
+      }
     });
+
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -345,6 +349,7 @@
   </script>
 </body>
 </html>
+
 
 
 
