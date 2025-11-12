@@ -25,19 +25,16 @@
   --glass: rgba(11,11,11,0.03);
   --shadow: 0 8px 20px rgba(12,15,20,0.06);
 }
-
-.logo-img {
-  width: 48px;
-  height: 48px;
-  border-radius: 10px;
-  object-fit: contain;
-  border: 2px solid var(--accent-color);
-  padding: 4px;
-  transition: border-color 0.3s ease, transform 0.3s ease;
+.brand-text {
+  font-weight: 700;
+  font-size: 1.25rem;
+  letter-spacing: 0.5px;
+  color: var(--text-color);
+  transition: color 0.3s ease;
 }
-.logo-img:hover {
-  transform: scale(1.05);
-  border-color: var(--text-color);
+.brand-text:hover {
+  color: var(--accent-color);
+}
 }
 .theme-light .logo-img {
   background-color: #fff; /* stays visible on light mode */
@@ -299,6 +296,7 @@ input:checked + .slider:before {
   background-color: #fcd34d;
   color: #000;
 }
+
 
 
 
