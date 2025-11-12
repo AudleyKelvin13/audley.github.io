@@ -252,6 +252,20 @@
       }
     });
 
+    // Save theme preference
+    const savedTheme = localStorage.getItem('theme');
+    if(savedTheme){
+      document.body.classList.remove('theme-dark','theme-light');
+      document.body.classList.add(savedTheme);
+      themeToggle.checked = savedTheme === 'theme-light';
+    }
+    
+    themeToggle.addEventListener('change', ()=>{
+      const theme = themeToggle.checked ? 'theme-light' : 'theme-dark';
+      document.body.classList.remove('theme-dark','theme-light');
+      document.body.classList.add(theme);
+      localStorage.setItem('theme', theme);
+    });
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
@@ -349,6 +363,7 @@
   </script>
 </body>
 </html>
+
 
 
 
