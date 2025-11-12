@@ -236,7 +236,33 @@
     const navList = document.getElementById('nav-list');
     document.getElementById('menu-toggle').addEventListener('click', ()=> navList.classList.add('open'));
     document.getElementById('menu-close').addEventListener('click', ()=> navList.classList.remove('open'));
-
+    
+    // THEME TOGGLE LOGIC
+    const themeToggle = document.getElementById('theme-toggle');
+    const body = document.body;
+    
+    // Check saved preference
+    const savedTheme = localStorage.getItem('theme');
+    if (savedTheme) {
+      body.classList.add(savedTheme);
+      themeToggle.checked = savedTheme === 'theme-light';
+    } else {
+      // default to dark mode
+      body.classList.add('theme-dark');
+    }
+    
+    // Toggle theme when slider changes
+    themeToggle.addEventListener('change', () => {
+      if (themeToggle.checked) {
+        body.classList.remove('theme-dark');
+        body.classList.add('theme-light');
+        localStorage.setItem('theme', 'theme-light');
+      } else {
+        body.classList.remove('theme-light');
+        body.classList.add('theme-dark');
+        localStorage.setItem('theme', 'theme-dark');
+      }
+    });
     // Theme toggle (slider)
     const themeToggle = document.getElementById('theme-toggle');
     themeToggle.addEventListener('change', ()=>{
@@ -360,6 +386,7 @@
   </script>
 </body>
 </html>
+
 
 
 
